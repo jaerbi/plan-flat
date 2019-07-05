@@ -1,0 +1,41 @@
+.inspectors-list-item {
+	cursor: pointer;
+	text-shadow: 2px 2px 8px var(--shadow-color);
+	transition: text-shadow 0.2s ease-in-out;
+
+	& .material-icons {
+		font-size: 3rem;
+	}
+
+	&:hover {
+		text-shadow: 0px 0px 5px var(--shadow-color);
+		& .title-tooltip {
+			opacity: 1;
+		}
+	}
+}
+.visibility {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	& .material-icons {
+		color: var(--primary-color);
+	}
+}
+
+.title-tooltip {
+	position: absolute;
+	top: -20px;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+
+	.tooltip-label {
+		white-space: nowrap;
+		padding: 2px 3px;
+		font-size: 0.7rem;
+		color: var(--dark-color);
+		background: var(--tooltip-color);
+		border-radius: 2px;
+	}
+}

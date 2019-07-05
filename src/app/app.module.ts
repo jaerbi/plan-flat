@@ -3,11 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { HouseComponent } from './house/house.component';
+import { ControlersComponent } from './controlers/controlers.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HouseComponent,
+    ControlersComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule
   ],
   providers: [],

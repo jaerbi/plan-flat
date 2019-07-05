@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+	--primary-color: #4AD1BD;
+	--dark-color: #333333;
+	--grey-color: rgba(55, 250, 104, 0.11);
+	--light-color: #f4f4f4;
+	--danger-color: #DC2A44;
+	--shadow-color: rgba(136, 220, 210, 0.75);
+	--tooltip-color: rgba(250, 246, 250, 0.89);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+	background: var(--light-color);
+	color: var(--dark-color);
+}
+
+ul {
+	list-style: none;
+}
+
+input {
+	display: block;
+	width: 100%;
+	padding: 0.4rem;
+	font-size: 1.2rem;
+	border: 1px solid var(--grey-color);
+	outline: none;
+	margin-bottom: 0.5rem;
+}
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 0.5rem;
+}
+
+.btn {
+	display: inline-block;
+	background: var(--light-color);
+	color: var(--dark-color);
+	padding: 0.4rem;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: opacity 0.2s;
+	outline: none;
+
+	&:disabled {
+		background: var(--dark-color);
+		color: var(--light-color);
+		cursor: not-allowed;
+	}
+
+	&:hover:not(:disabled) {
+		opacity: 0.8;
+	}
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-primary {
+	background: var(--primary-color);
+	color: var(--light-color);
+}
+
+.btn-danger {
+	background: var(--danger-color);
+	color: var(--light-color);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.relative {
+	position: relative;
+}
