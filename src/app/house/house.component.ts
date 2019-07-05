@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-house',
   templateUrl: './house.component.html',
   styleUrls: ['./house.component.scss']
 })
-export class HouseComponent implements OnInit {
+export class HouseComponent {
 
-  constructor() { }
+  rangeSize: number = 30;
 
-  ngOnInit() {
+  updateSetting(event) {
+    this.rangeSize = event.value;
   }
 
 }

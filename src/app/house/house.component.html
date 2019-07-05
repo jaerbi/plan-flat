@@ -1,4 +1,6 @@
 <div class="relative">
+  <mat-slider #rangeSize (change)="updateSetting($event)"></mat-slider>
+  <span>{{rangeSize.value}}</span>
 
   <app-controlers></app-controlers>
 
@@ -10,3 +12,4 @@
   <!--<app-sensor></app-sensor>-->
 
 </div>
+
