@@ -1,0 +1,11 @@
+<div class="tooltip">
+  <i *ngIf="visibility" class="material-icons">
+    {{item.title}}
+  </i>
+  <i *ngIf="!visibility" class="material-icons">
+    visibility_off
+  </i>
+  <div class="title-tooltip">
+    <span class="tooltip-label">{{item.title}}</span>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+mat-slider {
+	width: 100px;
+}
+
+.position {
+	top: 10px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--light-color);
+	text-shadow: 1px 1px 6px var(--dark-color);
+}
