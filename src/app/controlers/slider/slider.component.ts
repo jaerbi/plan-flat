@@ -1,30 +1,27 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Cont} from "../controlers.component";
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+	selector: 'app-slider',
+	templateUrl: './slider.component.html',
+	styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent {
 
-  @Input() item: Cont;
+	@Output() onChangeSlide = new EventEmitter<Cont>();
+	@Input() item: Cont;
+	rangeSize: number;
 
-  rangeSize: number;
-  @Output() onChangeSlide = new EventEmitter<Cont>();
+	updateSetting(event) {
+		this.rangeSize = event.value;
 
-  updateSetting(event) {
-    this.rangeSize = event.value;
-
-    this.onChangeSlide.emit({
-      title: this.item.title,
-      value: this.rangeSize
-    })
-  }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+		this.onChangeSlide.emit({
+			title: this.item.title,
+			value: this.rangeSize,
+			description: this.item.description,
+			controler: this.item.controler,
+			maxValue: this.item.maxValue,
+		})
+	}
 
 }

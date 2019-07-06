@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Cont} from "../controlers/controlers.component";
 
 @Component({
   selector: 'app-sensors',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sensors.component.scss']
 })
 export class SensorsComponent implements OnInit {
+
+  @Input() item: Cont;
 
   constructor() { }
 

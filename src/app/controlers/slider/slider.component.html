@@ -1,4 +1,9 @@
 <div class="slider relative">
   <span class="position">{{rangeSize.value}}</span>
 </div>
-<mat-slider #rangeSize (change)="updateSetting($event)" [(value)]="item.value"></mat-slider>
+<mat-slider
+    #rangeSize
+    (change)="updateSetting($event)"
+    [max]="item.maxValue"
+    [(value)]="item.value"
+></mat-slider>

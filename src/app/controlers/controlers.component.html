@@ -1,12 +1,22 @@
 <div>
 
-  <ul class="cont-list">
+  <ul class="cont-list" *ngIf="!isLoading" >
     <li *ngFor="let item of cont" class="cont-list-item">
-      <div class="position" [ngClass]="item.title">
+
+      <div class="position controler" [ngClass]="item.title">
         <app-tooltip [item]="item"></app-tooltip>
         <app-slider [item]="item" (onChangeSlide)="updateControlers($event)"></app-slider>
       </div>
+
+      <div class="position sensors" [ngClass]="item.title">
+        <app-sensors [item]="item"></app-sensors>
+      </div>
+
     </li>
   </ul>
+
+  <div class="position">
+    <mat-spinner color="warn" *ngIf="isLoading"></mat-spinner>
+  </div>
 
 </div>

@@ -5,8 +5,10 @@
 :root {
 	--primary-color: #4AD1BD;
 	--dark-color: #111111;
+	--green-color: #7ddca1;
 	--grey-color: rgba(55, 250, 104, 0.11);
 	--light-color: #f4f4f4;
+	--back-color: rgba(196, 226, 244, 0.25);
 	--danger-color: #DC2A44;
 	--shadow-color: rgba(136, 220, 210, 0.75);
 	--tooltip-color: rgba(250, 246, 250, 0.89);
@@ -97,22 +99,77 @@ input {
 	position: absolute;
 }
 
-.visibility {
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.controler {
+	background-color: var(--back-color);
+	border: 1px solid var(--grey-color);
+	border-radius: 6px;
+	transform: scale(0.8);
+	transition: transform 0.1s ease-in-out;
 
-	& .material-icons {
-		color: var(--primary-color);
+	&:hover {
+		transform: scale(1);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&.visibility {
+		bottom: 10%;
+		left: 50%;
+
+		& .material-icons {
+			color: var(--primary-color);
+		}
+	}
+
+	&.live_tv {
+		bottom: 20%;
+		left: 30%;
+
+		& .material-icons {
+			color: var(--primary-color);
+		}
+	}
+
+	&.wifi {
+		top: 30%;
+		left: 68%;
+
+		& .material-icons {
+			color: var(--green-color);
+		}
 	}
 }
 
-.live_tv {
-	bottom: 20%;
-	left: 30%;
-	transform: translate(-50%, -50%);
+.sensors {
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid var(--dark-color);
+	border-radius: 4px;
 
-	& .material-icons {
-		color: var(--primary-color);
+	&.visibility {
+		bottom: 20%;
+		left: 60%;
+
+		& .material-icons {
+			color: var(--primary-color);
+		}
+	}
+
+	&.wifi {
+		top: 20%;
+		left: 48%;
+
+		& .material-icons {
+			color: var(--green-color);
+		}
+	}
+
+	&.live_tv {
+		bottom: 40%;
+		left: 50%;
+
+		& .material-icons {
+			color: var(--primary-color);
+		}
 	}
 }

@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class HouseComponent {
 
-  rangeSize: number = 30;
-
-  updateSetting(event) {
-    this.rangeSize = event.value;
-  }
-
 }

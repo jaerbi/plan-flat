@@ -12,7 +12,9 @@ import { SliderComponent } from './controlers/slider/slider.component';
 import { TooltipComponent } from './controlers/tooltip/tooltip.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { SensorsComponent } from './sensors/sensors.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { SensorsComponent } from './sensors/sensors.component';
     SensorsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     MatSliderModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
     MatInputModule,
     MatButtonModule,
     MatBadgeModule

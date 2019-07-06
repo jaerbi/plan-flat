@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {FirebaseService} from "../shared/firebase.service";
 
 export interface Cont {
   title: string
+  description: string
+  controler: string
   value: number
+  maxValue: number
 }
 
 @Component({
@@ -12,22 +16,19 @@ export interface Cont {
 })
 export class ControlersComponent implements OnInit {
 
-  visibility: boolean = true;
+  isLoading: boolean = false;
+  cont: Cont[];
 
-  cont: Cont[] = [
-    {
-      title: 'visibility',
-      value: 10
-    },
-    {
-      title: 'live_tv',
-      value: 20
-    },
-  ];
-
-  constructor() { }
+  constructor(public fb: FirebaseService) { }
 
   ngOnInit() {
+    this.isLoading = true;
+    this.fb.loadAll().subscribe((resp) => {
+      this.cont = resp;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 500);
+    })
   }
 
   updateControlers(cont: Cont) {
