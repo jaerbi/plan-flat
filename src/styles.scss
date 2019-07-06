@@ -9,6 +9,7 @@
 	--grey-color: rgba(55, 250, 104, 0.11);
 	--light-color: #f4f4f4;
 	--back-color: rgba(196, 226, 244, 0.25);
+	--back-sens-color: rgba(241, 255, 254, 0.31);
 	--danger-color: #DC2A44;
 	--shadow-color: rgba(136, 220, 210, 0.75);
 	--tooltip-color: rgba(250, 246, 250, 0.89);
@@ -143,6 +144,10 @@ input {
 	width: 200px;
 	margin: 10px;
 	padding: 10px;
+	color: var(--light-color);
+	text-shadow: 2px 2px 8px var(--dark-color);
+	background-color: var(--back-sens-color);
+	transition: text-shadow 0.2s ease-in-out;
 	border: 1px solid var(--dark-color);
 	border-radius: 4px;
 
