@@ -64,6 +64,23 @@ img {
 	}
 }
 
+.footer {
+	display: flex;
+	justify-content: center;
+
+	& small {
+		display: flex;
+		align-items: center;
+		font-size: 0.6rem;
+		line-height: 1;
+
+		& i {
+			font-size: 0.6rem;
+			padding-left: 1px;
+		}
+	}
+}
+
 .container {
 	max-width: 1100px;
 	margin: auto;
@@ -203,8 +220,7 @@ img {
 			color: var(--cold-color);
 		}
 	}
-
-	@media (max-width: 920px) {
+	@media (max-width: 1150px) {
 		transform: scale(0.6);
 		transition: transform 0.1s ease-in-out;
 
@@ -212,7 +228,9 @@ img {
 			transform: scale(0.8);
 			transition: transform 0.3s ease-in-out;
 		}
+	}
 
+	@media (max-width: 920px) {
 		&.wb_incandescent {
 			left: 2%;
 		}

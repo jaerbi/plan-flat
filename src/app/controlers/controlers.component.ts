@@ -17,7 +17,7 @@ export interface Cont {
 })
 export class ControlersComponent implements OnInit {
 
-  @ViewChild('sensorElement') sensorElement: ElementRef;
+  @ViewChild('sensorElement', { static: false }) sensorElement: ElementRef;
   isLoading: boolean = false;
   cont: Cont[];
 
