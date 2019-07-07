@@ -1,3 +1,21 @@
-<div>
+<div class="text-center" [ngClass]="{
+  'sensor-vis': this.item.title === 'visibility',
+  'sensor-bright': this.item.title === 'brightness_6',
+  'sensor-tv': this.item.title === 'live_tv',
+  'sensor-wifi': this.item.title === 'wifi',
+  'sensor-wb': this.item.title === 'wb_incandescent'
+}">
   <span>{{item.description}}</span>
+  <span
+      [ngClass]="{'sensor-food': this.item.title === 'fastfood'}"
+      *ngIf="item.title === 'fastfood'"
+  > - {{item.value}}C
+  </span>
+
+  <span
+      [ngClass]="{'sensor-unit': this.item.title === 'ac_unit'}"
+      *ngIf="item.title === 'ac_unit'"
+  > + {{item.value}}C
+  </span>
+
 </div>

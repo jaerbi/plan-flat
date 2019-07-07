@@ -1,4 +1,4 @@
-<div>
+<div #sensorElement>
 
   <ul class="cont-list" *ngIf="!isLoading" >
     <li *ngFor="let item of cont" class="cont-list-item">
@@ -9,7 +9,7 @@
       </div>
 
       <div class="position sensors" [ngClass]="item.title">
-        <app-sensors [item]="item"></app-sensors>
+        <app-sensors [item]="item" [sensorElement]="sensorElement"></app-sensors>
       </div>
 
     </li>

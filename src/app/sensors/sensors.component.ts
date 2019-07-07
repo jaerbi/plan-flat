@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {Cont} from "../controlers/controlers.component";
 
 @Component({
@@ -9,10 +9,13 @@ import {Cont} from "../controlers/controlers.component";
 export class SensorsComponent implements OnInit {
 
   @Input() item: Cont;
+  @Input() sensorElement: ElementRef;
 
-  constructor() { }
+  tv: boolean = false;
 
   ngOnInit() {
+    if (this.item.title === 'live_tv') {
+      this.tv = this.item.value ? true : false;
+    }
   }
-
 }

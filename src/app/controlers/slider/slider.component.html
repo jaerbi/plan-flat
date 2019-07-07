@@ -1,9 +1,11 @@
 <div class="slider relative">
-  <span class="position">{{rangeSize.value}}</span>
+  <span *ngIf="showValue" class="position">{{rangeSize.value}}</span>
+  <span *ngIf="showOnOff" class="position">{{textOnOff}}</span>
 </div>
 <mat-slider
     #rangeSize
     (change)="updateSetting($event)"
     [max]="item.maxValue"
+    [min]="item.minValue"
     [(value)]="item.value"
 ></mat-slider>

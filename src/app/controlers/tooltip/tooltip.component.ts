@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Cont} from "../controlers.component";
 
 
@@ -8,15 +8,7 @@ import {Cont} from "../controlers.component";
   styleUrls: ['./tooltip.component.scss']
 })
 
-export class TooltipComponent implements OnInit {
+export class TooltipComponent {
 
-  visibility: boolean = true;
-
-
-@Input() item: Cont;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() item: Cont;
 }
